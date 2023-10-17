@@ -1,0 +1,15 @@
+import { useLoaderData } from "react-router-dom";
+import BrandCard from "./BrandCard";
+
+ 
+const Brand = () => {
+    const brands = useLoaderData()
+     return (
+        <div className="mt-4">
+            <h2 className="text-5xl font-bold text-center text-blue-500"> Featured Listings</h2>
+            <BrandCard brands={brands}></BrandCard>
+        </div>
+    );
+};
+
+export default Brand;
