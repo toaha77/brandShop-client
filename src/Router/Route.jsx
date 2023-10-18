@@ -3,6 +3,9 @@ import Home from "../Home/Home";
 import MainLayout from "../Layout/MainLayout";
 import Error from "../Error/Error";
 import AddProduct from "../AddProduct/AddProduct";
+import Login from "../Login/Login";
+import Register from "../register/Register";
+import PrivateRoute from "../PrivateRouter/PrivateRouter";
 
  
 const  myCratedRoute = createBrowserRouter([
@@ -19,7 +22,15 @@ const  myCratedRoute = createBrowserRouter([
             },
             {
                 path: '/addProduct',
-                element: <AddProduct></AddProduct>
+                element:<PrivateRoute> <AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
 
