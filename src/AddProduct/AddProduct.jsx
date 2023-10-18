@@ -1,8 +1,13 @@
+import toast from "react-hot-toast";
 import { json } from "react-router-dom";
 
  
 const AddProduct = () => {
+    const handleProduct = () => {
+        toast.success('Product added successfully')
+    }
     const handleAddProduct = e => {
+        
         e.preventDefault()
         const form = e.target;
         const name = form.name.value;
@@ -11,6 +16,7 @@ const AddProduct = () => {
         const type = form.type.value;
         const description = form.description.value;
         const price = form.price.value;
+        const rating = form.rating.value;
 
         const addProduct= {
             name,
@@ -18,7 +24,8 @@ const AddProduct = () => {
             photo,
             type,
             description,
-            price
+            price,
+            rating
         }
         console.log(addProduct)
         fetch('http://localhost:5000/addProduct', {
@@ -70,7 +77,7 @@ console.log(data);
                         <span className="label-text">Type</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" />
+                        <input type="select" name="type" placeholder="Type" className="input input-bordered w-full" />
                     </label>
                 </div>
             </div>
@@ -105,7 +112,7 @@ console.log(data);
                 </div>
              
             <div className="flex justify-center  items-center">
-            <input type="submit" value="Add Product" className="btn bg-blue-500 text-white hover:bg-blue-500" />
+            <input onClick={handleProduct} type="submit" value="Add Product" className="btn bg-blue-500 text-white hover:bg-blue-500" />
             </div>
 
         </form>

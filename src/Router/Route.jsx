@@ -6,7 +6,9 @@ import AddProduct from "../AddProduct/AddProduct";
 import Login from "../Login/Login";
 import Register from "../register/Register";
 import PrivateRoute from "../PrivateRouter/PrivateRouter";
-
+import Details from "../Details/Details";
+import UpdateProduct from "../AddProduct/UpdateProduct";
+ 
  
 const  myCratedRoute = createBrowserRouter([
     {
@@ -18,11 +20,21 @@ const  myCratedRoute = createBrowserRouter([
 
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('/data.json')
+                loader: ()=> fetch('http://localhost:5000/brands')
             },
             {
                 path: '/addProduct',
                 element:<PrivateRoute> <AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path: '/details',
+                element :  <Details></Details>,
+                loader: ()=> fetch(`http://localhost:5000/addProduct`)
+            },
+            {
+             path: '/details/updateProduct/:id',
+             element: <UpdateProduct></UpdateProduct>,
+             loader: ({params})=> fetch(`http://localhost:5000/addProduct/${params.id}`)
             },
             {
                 path: '/login',

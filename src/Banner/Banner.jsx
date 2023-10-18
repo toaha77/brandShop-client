@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div className="mt-6">
@@ -11,13 +13,16 @@ const Banner = () => {
         <div className=" hero-overlay bg-opacity-90 "></div>
         <div className="    ">
           <div className="text-white ">
-            <h1 className="mb-5 text-6xl font-bold">Find Your <br /> <span className="text-blue-500">Perfect </span> Car</h1>
+            <p className="text-blue-500 text-xl"> Plan your trip now</p>
+            <h1 className="text-5xl font-bold ">Explore the world with <br /> comfortable car</h1>
             <p className="mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <Link to='/'>
+              <button className="btn text-white bg-blue-500 hover:bg-blue-500 ">Choose a car</button>
+            </Link>
           </div>
         </div>
       </div>
