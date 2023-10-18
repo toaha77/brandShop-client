@@ -15,7 +15,7 @@ const Navbar = () => {
     const stickNavbar = () => {
       if (window !== undefined) {
         let windowHe = window.scrollY;
-        windowHe > 100 ? setFix("fixed top-0 left-0 z-50") : setFix("relative");
+        windowHe > 120 ? setFix("fixed top-0 left-0 z-50") : setFix("relative");
       }
     };
     const navlinks = (
@@ -56,7 +56,7 @@ const Navbar = () => {
       </ul>
     </div>
 <div className="flex items-center justify-center">
-<img src="/public/car-logo-removebg-preview.png" className="w-24 " alt="" />
+<img src="/public/car-logo-removebg-preview.png" className="w-24 h-[50px]" alt="" />
 <a className="  normal-case text-3xl font-bold text-white">Car Next</a>
 
 </div>
