@@ -1,6 +1,5 @@
 import toast from "react-hot-toast";
-import { json } from "react-router-dom";
-
+ 
  
 const AddProduct = () => {
     const handleProduct = () => {

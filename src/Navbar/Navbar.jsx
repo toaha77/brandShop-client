@@ -77,7 +77,7 @@ const Navbar = () => {
       </ul>
     </div>
 <div className="flex items-center justify-center">
-<img src="/public/car-logo-removebg-preview.png" className="w-24 h-[50px]" alt="" />
+<img src="/car-logo-removebg-preview.png" className="w-24 h-[50px]" alt="" />
 <a className="  normal-case text-3xl font-bold text-white">Car Next</a>
 
 </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
               </div>
             ) : (
               <Link to="/login">
-                <button className="btn btn-sm  btn-ghost">Login</button>
+                <button className="btn btn-sm text-white btn-ghost">Login</button>
               </Link>
             )}
   </div>

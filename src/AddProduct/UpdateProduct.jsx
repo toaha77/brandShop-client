@@ -80,7 +80,7 @@ const UpdateProduct = () => {
                     <label className="label">
                         <span className="label-text">Type</span>
                     </label>
-                    <label className="input-group">
+                    <label className="input-group dropdown">
                         <input type="select" name="type" defaultValue={type} placeholder="Type" className="input input-bordered w-full" />
                     </label>
                 </div>

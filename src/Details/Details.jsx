@@ -1,7 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import DisplayAddProduct from "../AddProduct/DisplayAddProduct";
-
+ 
  
 const Details = () => {
+  const loader = useLoaderData()
+  console.log(loader);
     return (
         <div className="container mx-auto mt-4">
               <div className="carousel w-full">
@@ -35,6 +38,7 @@ const Details = () => {
     </div>
   </div>
   <div>
+     
     <DisplayAddProduct></DisplayAddProduct>
   </div>
         </div>
