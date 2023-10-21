@@ -11,7 +11,7 @@ const Works = () => {
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
      <div className="card   bg-base-200">
         <figure className="px-10 pt-10">
-          <AiOutlineSearch className="text-6xl bg-white p-2 rounded-full"></AiOutlineSearch>
+          <AiOutlineSearch className="text-6xl bg-white p-2 rounded-full hover:bg-blue-500"></AiOutlineSearch>
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">01. Select your car</h2>
@@ -20,7 +20,7 @@ const Works = () => {
       </div>
       <div className="card  bg-base-200">
         <figure className="px-10 pt-10">
-          <TbBrandBooking className="text-6xl bg-white p-2 rounded-full"></TbBrandBooking>
+          <TbBrandBooking className="text-6xl bg-white p-2 rounded-full hover:bg-blue-500"></TbBrandBooking>
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">02. Define your booking</h2>
@@ -29,7 +29,7 @@ const Works = () => {
       </div>
       <div className="card  bg-base-200">
         <figure className="px-10 pt-10">
-          <MdPayment className="text-6xl bg-white p-2 rounded-full"></MdPayment>
+          <MdPayment className="text-6xl bg-white p-2 rounded-full hover:bg-blue-500"></MdPayment>
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">03. Payment</h2>

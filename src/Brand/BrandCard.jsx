@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { WiDirectionRight} from "react-icons/wi"
+import { useState } from "react";
 const BrandCard = ({ brands }) => {
-  
-  return (
+    
+   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {brands?.map((brand) => {
         return (

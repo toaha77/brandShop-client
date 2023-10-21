@@ -8,7 +8,8 @@ import Register from "../register/Register";
 import PrivateRoute from "../PrivateRouter/PrivateRouter";
 import Details from "../Details/Details";
 import UpdateProduct from "../AddProduct/UpdateProduct";
-  
+import BRand from "../AddProduct/BRand";
+   
  
 const  myCratedRoute = createBrowserRouter([
     {
@@ -27,6 +28,12 @@ const  myCratedRoute = createBrowserRouter([
                 element:<PrivateRoute> <AddProduct></AddProduct></PrivateRoute>
             },
             
+          
+            {
+                path: '/details/brandsCard',
+                element: <BRand></BRand>,
+                loader: ()=> fetch('http://localhost:5173/brandsCard')
+            },
             {
                 path: '/details',
                 element :  <Details></Details>,
