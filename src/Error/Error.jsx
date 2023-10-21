@@ -1,10 +1,10 @@
- 
 const Error = () => {
-    return (
-        <div>
-            No Data Found
-        </div>
-    );
+  return (
+    <div>
+        <h3>No data Found</h3>
+    </div>
+  )
+    
 };
 
 export default Error;
