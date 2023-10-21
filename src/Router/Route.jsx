@@ -8,9 +8,10 @@ import Register from "../register/Register";
 import PrivateRoute from "../PrivateRouter/PrivateRouter";
 import Details from "../Details/Details";
 import UpdateProduct from "../AddProduct/UpdateProduct";
- import MyCart from "../MyCart/MyCart";
+import MyCart from "../MyCart/MyCart";
 import BRand from "../AddProduct/BRand";
- 
+import MoreDetails from "../AddProduct/MoreDetails";
+
 const myCratedRoute = createBrowserRouter([
   {
     path: "/",
@@ -21,9 +22,7 @@ const myCratedRoute = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () =>
-          fetch(
-            "https://brand-shop-server-alpha-eight.vercel.app/brands"
-          ),
+          fetch("https://brand-shop-server-alpha-eight.vercel.app/brands"),
       },
       {
         path: "/addProduct",
@@ -39,17 +38,19 @@ const myCratedRoute = createBrowserRouter([
         path: "/brandsCard",
         element: <BRand></BRand>,
         loader: () =>
-          fetch(
-            "https://brand-shop-server-alpha-eight.vercel.app/brandsCard"
-          ),
+          fetch('https://brand-shop-server-alpha-eight.vercel.app/brandsCard'),
       },
       {
         path: "/details",
         element: <Details></Details>,
         loader: () =>
-          fetch(
-            `https://brand-shop-server-alpha-eight.vercel.app/addProduct`
-          ),
+          fetch("https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app "),
+      },
+
+      {
+        path: "/details/moreDetails/:id",
+        element: <PrivateRoute><MoreDetails></MoreDetails></PrivateRoute>
+        // loader: ({params}) => fetch(`https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${params.id}`)
       },
 
       {
@@ -62,12 +63,12 @@ const myCratedRoute = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-alpha-eight.vercel.app/addProduct/${params.id}`
+            `https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${params.id}`
           ),
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
       },
       {
         path: "/login",

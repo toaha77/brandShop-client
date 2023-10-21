@@ -6,6 +6,7 @@ import Works from "../Works/Works";
  
 const Home = () => {
     
+    
     return (
         <div className="container mx-auto">
             <Banner></Banner>

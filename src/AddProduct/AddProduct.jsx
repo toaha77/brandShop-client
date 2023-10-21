@@ -25,7 +25,7 @@ const AddProduct = () => {
             rating
         }
         console.log(addProduct)
-        fetch('https://brand-shop-server-alpha-eight.vercel.app/addProduct', {
+        fetch('https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app ', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
