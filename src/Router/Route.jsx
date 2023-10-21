@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRouter/PrivateRouter";
 import Details from "../Details/Details";
 import UpdateProduct from "../AddProduct/UpdateProduct";
 import BRand from "../AddProduct/BRand";
+import MyCart from "../MyCart/MyCart";
    
  
 const  myCratedRoute = createBrowserRouter([
@@ -30,7 +31,7 @@ const  myCratedRoute = createBrowserRouter([
             
           
             {
-                path: '/details/brandsCard',
+                path: '/brandsCard',
                 element: <BRand></BRand>,
                 loader: ()=> fetch('http://localhost:5173/brandsCard')
             },
@@ -46,6 +47,10 @@ const  myCratedRoute = createBrowserRouter([
              path: '/details/updateProduct/:id',
              element:<PrivateRoute> <UpdateProduct></UpdateProduct></PrivateRoute>,
              loader: ({params})=> fetch(`http://localhost:5000/addProduct/${params.id}`)
+            },
+            {
+                path: '/myCart',
+                element: <MyCart></MyCart>
             },
             {
                 path: '/login',

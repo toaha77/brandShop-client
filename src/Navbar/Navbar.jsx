@@ -66,6 +66,21 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to="/myCart "
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " bg-blue-500  rounded-md font-semibold   border"
+              : "text-white"
+          }
+        >
+        My Cart
+       </NavLink>
+
+      </li>
+      <li>
+        <NavLink
           to="/login "
           className={({ isActive, isPending }) =>
             isPending
