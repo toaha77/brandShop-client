@@ -58,7 +58,7 @@ const Navbar = () => {
               ? "pending"
               : isActive
               ? " bg-blue-500  rounded-md font-semibold   border"
-              : "text-white"
+              : "  "
           }
         >
           Add Product
@@ -72,7 +72,7 @@ const Navbar = () => {
               ? "pending"
               : isActive
               ? " bg-blue-500  rounded-md font-semibold   border"
-              : "text-white"
+              : " "
           }
         >
         My Cart
