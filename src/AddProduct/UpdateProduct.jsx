@@ -29,7 +29,7 @@ const UpdateProduct = () => {
             rating
         }
         console.log(updatedProduct)
-        fetch(`https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${_id}`, {
+        fetch(`https://brand-shop-server-alpha-eight.vercel.app/addproduct/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

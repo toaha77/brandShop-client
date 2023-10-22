@@ -5,12 +5,12 @@ import Error from "../Error/Error";
 import AddProduct from "../AddProduct/AddProduct";
 import Login from "../Login/Login";
 import Register from "../register/Register";
-import PrivateRoute from "../PrivateRouter/PrivateRouter";
-import Details from "../Details/Details";
-import UpdateProduct from "../AddProduct/UpdateProduct";
+ import PrivateRoute from "../PrivateRouter/PrivateRouter";
+ import UpdateProduct from "../AddProduct/UpdateProduct";
 import MyCart from "../MyCart/MyCart";
 import BRand from "../AddProduct/BRand";
 import MoreDetails from "../AddProduct/MoreDetails";
+import DisplayAddProduct from "../AddProduct/DisplayAddProduct";
 
 const myCratedRoute = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const myCratedRoute = createBrowserRouter([
     element: <MainLayout></MainLayout>,
     errorElement: <Error />,
     children: [
-      {
+      { 
         path: "/",
         element: <Home></Home>,
         loader: () =>
@@ -33,28 +33,28 @@ const myCratedRoute = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // {
+      //   path: '/addProduct1',
+      //   element: <DisplayAddProduct></DisplayAddProduct>,
+      //   loader: fetch(`https://brand-shop-server-alpha-eight.vercel.app/addProduct`)
+      // },
 
       {
-        path: "/brandsCard",
+        path: "/brandsCard/:brand",
         element: <BRand></BRand>,
-        loader: () =>
-          fetch('https://brand-shop-server-alpha-eight.vercel.app/brandsCard'),
+        loader: ({params}) =>
+          fetch(`https://brand-shop-server-alpha-eight.vercel.app/brandsCard/${params.brand}`),
       },
+      
+
       {
-        path: "/details",
-        element: <Details></Details>,
-        loader: () =>
-          fetch("https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app "),
+        path: "/details/:id",
+        element: <PrivateRoute><MoreDetails></MoreDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://brand-shop-server-alpha-eight.vercel.app/${params.id}`)
       },
 
       {
-        path: "/details/moreDetails/:id",
-        element: <PrivateRoute><MoreDetails></MoreDetails></PrivateRoute>
-        // loader: ({params}) => fetch(`https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${params.id}`)
-      },
-
-      {
-        path: "/details/updateProduct/:id",
+        path: "/updateProduct/:id",
         element: (
           <PrivateRoute>
             {" "}
@@ -63,7 +63,7 @@ const myCratedRoute = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${params.id}`
+            `https://brand-shop-server-alpha-eight.vercel.app/addProduct/${params.id}`
           ),
       },
       {

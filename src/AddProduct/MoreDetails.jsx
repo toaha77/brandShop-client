@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link , useParams } from "react-router-dom";
 
 const MoreDetails = () => {
+  
   // const loader = useLoaderData()
   // console.log(loader);
   const data = useParams();
@@ -10,13 +11,13 @@ const MoreDetails = () => {
 
   useEffect(() => {
     fetch(
-      `https://brand-shop-server-79q1mlkf7-toahas-projects.vercel.app /${data.id}`
+      `https://brand-shop-server-alpha-eight.vercel.app/${data.id}`
     )
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [data.id]);
 
-  const { _id, name, brand, photo, type, description, price, rating } = product;
+  const { _id, name, brand, photo, type, description, price, rating } = product || {}
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -75,9 +76,11 @@ const MoreDetails = () => {
             </span>
           </div>
           <p className="mt-2">{product.description}</p>
-          <button className="btn bg-blue-500 text-white hover:bg-blue-500 text-white ">
+         <Link to='/myCart'>
+         <button className="btn bg-blue-500 text-white hover:bg-blue-500 text-white ">
             Add to cart
           </button>
+         </Link>
         </div>
       </div>
     </div>

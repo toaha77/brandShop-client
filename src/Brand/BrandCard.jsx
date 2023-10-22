@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { WiDirectionRight} from "react-icons/wi"
  const BrandCard = ({ brands }) => {
- 
+ console.log(brands);
     return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {brands?.map((brand) => {
@@ -22,7 +22,7 @@ import { WiDirectionRight} from "react-icons/wi"
               <h2 className="text-2xl text-center">{brand.title}</h2>
               
               <div className="card-actions justify-center">
-               <Link to='/details'>
+               <Link to={`/brandsCard/${brand.title}`}>
                <button  className="btn bg-blue-500 text-white hover:bg-blue-500 border">See Details <WiDirectionRight className="text-3xl"></WiDirectionRight> </button>
                </Link>
               </div>
