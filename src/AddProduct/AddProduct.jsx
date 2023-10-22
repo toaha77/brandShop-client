@@ -6,6 +6,7 @@ const AddProduct = () => {
     const form = e.target;
     const name = form.name.value;
     const brand = form.brand.value;
+    const pets = form.pets.value;
     const photo = form.photo.value;
     const type = form.type.value;
     const description = form.description.value;
@@ -15,6 +16,7 @@ const AddProduct = () => {
     const addProduct = {
       name,
       brand,
+      pets,
       photo,
       type,
       description,
@@ -75,14 +77,14 @@ const AddProduct = () => {
             </label>
             <label htmlFor="pet-select" >Choose a Car:</label>
 
-<select name="pets" id="pet-select">
+<select name="pets">
   <option value="">--Please choose an option--</option>
-  <option value="dog">Toyota</option>
-  <option value="cat">BMW</option>
-  <option value="hamster">Hyundai</option>
-  <option value="parrot">Ford</option>
-  <option value="spider">Marcedez-Benz</option>
-  <option value="goldfish">Tesla</option>
+  <option value="Toyota">Toyota</option>
+  <option value="BMW">BMW</option>
+  <option value="Hyundai">Hyundai</option>
+  <option value="Ford">Ford</option>
+  <option value="Marcedez-Benz">Marcedez-Benz</option>
+  <option value="Tesla">Tesla</option>
 </select>
           </div>
         </div>

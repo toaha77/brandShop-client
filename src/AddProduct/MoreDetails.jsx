@@ -7,6 +7,7 @@ const MoreDetails = () => {
   // const loader = useLoaderData()
   // console.log(loader);
   const data = useParams();
+  console.log(data);
   const [product, setProduct] = useState({});
 
   useEffect(() => {

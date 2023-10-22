@@ -10,8 +10,7 @@ import Register from "../register/Register";
 import MyCart from "../MyCart/MyCart";
 import BRand from "../AddProduct/BRand";
 import MoreDetails from "../AddProduct/MoreDetails";
-import DisplayAddProduct from "../AddProduct/DisplayAddProduct";
-
+ 
 const myCratedRoute = createBrowserRouter([
   {
     path: "/",
@@ -33,11 +32,7 @@ const myCratedRoute = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: '/addProduct1',
-      //   element: <DisplayAddProduct></DisplayAddProduct>,
-      //   loader: fetch(`https://brand-shop-server-alpha-eight.vercel.app/addProduct`)
-      // },
+      
 
       {
         path: "/brandsCard/:brand",

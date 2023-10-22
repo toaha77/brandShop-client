@@ -20,8 +20,7 @@ const BrandsCard = ({brandsData}) =>   {
     brandsData.map((brand) => <SingleBrand key={brand.id} brand = {brand}></SingleBrand>)
 }
 </div>
-<DisplayAddProduct></DisplayAddProduct>
-</>
+ </>
     );
 
    };
