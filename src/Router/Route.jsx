@@ -24,7 +24,7 @@ const myCratedRoute = createBrowserRouter([
           fetch("https://brand-shop-server-alpha-eight.vercel.app/brands"),
       },
       {
-        path: "/addProduct",
+        path: "/brandsCard",
         element: (
           <PrivateRoute>
             {" "}
@@ -58,7 +58,7 @@ const myCratedRoute = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-alpha-eight.vercel.app/addProduct/${params.id}`
+            `https://brand-shop-server-alpha-eight.vercel.app/brandsCard/${params.id}`
           ),
       },
       {

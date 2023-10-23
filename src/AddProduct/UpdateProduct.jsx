@@ -29,7 +29,7 @@ const UpdateProduct = () => {
             rating
         }
         console.log(updatedProduct)
-        fetch(`https://brand-shop-server-alpha-eight.vercel.app/addproduct/${_id}`, {
+        fetch(`https://brand-shop-server-alpha-eight.vercel.app/brandsCard/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

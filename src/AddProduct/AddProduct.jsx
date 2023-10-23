@@ -5,7 +5,7 @@ const AddProduct = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const brand = form.brand.value;
+    const brand_name = form.brand_name.value;
     const pets = form.pets.value;
     const photo = form.photo.value;
     const type = form.type.value;
@@ -15,7 +15,7 @@ const AddProduct = () => {
 
     const addProduct = {
       name,
-      brand,
+      brand_name,
       pets,
       photo,
       type,
@@ -24,7 +24,7 @@ const AddProduct = () => {
       rating,
     };
     console.log(addProduct);
-    fetch("https://brand-shop-server-alpha-eight.vercel.app/addProduct", {
+    fetch("https://brand-shop-server-alpha-eight.vercel.app/brandsCard", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const AddProduct = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="brand"
+                name="brand_name"
                 placeholder="Brand Name"
                 className="input input-bordered w-full  "
                 required
@@ -83,7 +83,7 @@ const AddProduct = () => {
   <option value="BMW">BMW</option>
   <option value="Hyundai">Hyundai</option>
   <option value="Ford">Ford</option>
-  <option value="Marcedez-Benz">Marcedez-Benz</option>
+  <option value="Mercedez-Benz">Mercedez-Benz</option>
   <option value="Tesla">Tesla</option>
 </select>
           </div>

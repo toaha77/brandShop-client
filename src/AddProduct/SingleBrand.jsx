@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
  
  
  
-const SingleBrand = ({brand}) => {
+const   SingleBrand = ({brand}) => {
   
     // console.log(brand);
-    const {_id, name, brand_name, image, type, description, price, rating
+    const {_id, name, brand_name, photo, type, description, price, rating
     } = brand;
  
     return (
         <>
         <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
     <a href="#">
-        <img className="p-8 rounded-t-lg w-[380px] h-80" src={brand.image} alt="product image" />
+        <img className="p-8 rounded-t-lg w-[380px] h-80" src={brand.photo} alt="product image" />
     </a>
     <div className="px-5 pb-5">
        

@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import BrandsCard from "./BrandsCard";
- 
+  
 const BRand = () => {
   const brandsData = useLoaderData();
   console.log(brandsData);
@@ -84,7 +84,7 @@ const BRand = () => {
           <BrandsCard brandsData={brandsData}></BrandsCard>
         </div>
       </div>
-       
+      
     </>
   );
 };
